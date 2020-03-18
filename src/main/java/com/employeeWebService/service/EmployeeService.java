@@ -16,5 +16,7 @@ void editEmployee(Employee employee);
 
 public Employee getByEmployeeCode(int code);
 
+public void addEmployee(Employee employee);
+
 
 }
