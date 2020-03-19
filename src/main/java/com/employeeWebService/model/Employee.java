@@ -1,20 +1,17 @@
 package com.employeeWebService.model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -34,8 +31,20 @@ public class Employee {
 	@NotNull
 	@Size(max = 100, message = "EmailId can not be 100 characters long")
 	String emailId;
-	@NotNull
 	Date dateOfBirth;
+	@NotNull
+	String dobInString;
+	public String getDobInString() {
+		return dobInString;
+	}
+	
+	public void setDobInString(String dobInString) throws ParseException {
+		this.dobInString = dobInString;
+		if(dobInString != null)
+		this.dateOfBirth= new SimpleDateFormat("yyyy-MM-dd").parse(dobInString);
+		
+			
+	}
 
 	public Employee convertEmployeeEntityToModel(com.employeeWebService.entity.Employee source) {
 		ModelMapper modelMapper = new ModelMapper();
