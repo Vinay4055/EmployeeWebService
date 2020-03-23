@@ -35,4 +35,417 @@
 ""2020-03-23 11:56:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
 ""2020-03-23 11:56:32 - HikariPool-1 - Shutdown initiated...
 ""2020-03-23 11:56:32 - HikariPool-1 - Shutdown completed.
+""2020-03-23 14:46:44 - Starting EmployeeWebServiceApplication on vinayprajapati with PID 23968 (C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService\target\classes started by vinayprajapati in C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService)
+""2020-03-23 14:46:44 - No active profile set, falling back to default profiles: default
+""2020-03-23 14:46:44 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 14:46:44 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-03-23 14:46:44 - Finished Spring Data repository scanning in 51ms. Found 1 JPA repository interfaces.
+""2020-03-23 14:46:44 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 14:46:44 - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+""2020-03-23 14:46:44 - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.employeeWebService.repository.EmployeeRepository. If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository.
+""2020-03-23 14:46:44 - Finished Spring Data repository scanning in 5ms. Found 0 LDAP repository interfaces.
+""2020-03-23 14:46:45 - Tomcat initialized with port(s): 7070 (http)
+""2020-03-23 14:46:45 - Starting service [Tomcat]
+""2020-03-23 14:46:45 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+""2020-03-23 14:46:45 - Initializing Spring embedded WebApplicationContext
+""2020-03-23 14:46:45 - Root WebApplicationContext: initialization completed in 1471 ms
+""2020-03-23 14:46:45 - Property 'userDn' not set - anonymous context will be used for read-write operations
+""2020-03-23 14:46:45 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-03-23 14:46:46 - HHH000412: Hibernate ORM core version 5.4.12.Final
+""2020-03-23 14:46:46 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-03-23 14:46:46 - HikariPool-1 - Starting...
+""2020-03-23 14:46:46 - HikariPool-1 - Start completed.
+""2020-03-23 14:46:46 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-03-23 14:46:47 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-03-23 14:46:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 14:46:47 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-03-23 14:46:48 - Exposing 2 endpoint(s) beneath base path '/actuator'
+""2020-03-23 14:46:48 - Tomcat started on port(s): 7070 (http) with context path ''
+""2020-03-23 14:46:48 - Started EmployeeWebServiceApplication in 4.51 seconds (JVM running for 5.423)
+""2020-03-23 14:47:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2020-03-23 14:47:10 - Initializing Servlet 'dispatcherServlet'
+""2020-03-23 14:47:10 - Completed initialization in 13 ms
+""2020-03-23 15:24:35 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction] with root cause
+"javax.validation.ConstraintViolationException: Validation failed for classes [com.employeeWebService.entity.Employee] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='Name can not be null', propertyPath=name, rootBeanClass=class com.employeeWebService.entity.Employee, messageTemplate='Name can not be null'}
+]
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
+	at org.hibernate.action.internal.EntityInsertAction.preInsert(EntityInsertAction.java:227)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:100)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1352)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:443)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3202)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2370)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:631)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy118.save(Unknown Source)
+	at com.employeeWebService.serviceImpl.EmployeeServiceImpl.addEmployee(EmployeeServiceImpl.java:31)
+	at com.employeeWebService.controller.EmployeeController.addEmployee(EmployeeController.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+"2020-03-23 15:26:52 - Application shutdown requested.
+""2020-03-23 15:26:52 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-03-23 15:26:52 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 15:26:52 - HikariPool-1 - Shutdown initiated...
+""2020-03-23 15:26:52 - HikariPool-1 - Shutdown completed.
+""2020-03-23 16:04:13 - Starting EmployeeWebServiceApplication on vinayprajapati with PID 18572 (C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService\target\classes started by vinayprajapati in C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService)
+""2020-03-23 16:04:13 - No active profile set, falling back to default profiles: default
+""2020-03-23 16:04:14 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 16:04:14 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-03-23 16:04:14 - Finished Spring Data repository scanning in 48ms. Found 1 JPA repository interfaces.
+""2020-03-23 16:04:14 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 16:04:14 - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+""2020-03-23 16:04:14 - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.employeeWebService.repository.EmployeeRepository. If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository.
+""2020-03-23 16:04:14 - Finished Spring Data repository scanning in 4ms. Found 0 LDAP repository interfaces.
+""2020-03-23 16:04:15 - Tomcat initialized with port(s): 7070 (http)
+""2020-03-23 16:04:15 - Starting service [Tomcat]
+""2020-03-23 16:04:15 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+""2020-03-23 16:04:15 - Initializing Spring embedded WebApplicationContext
+""2020-03-23 16:04:15 - Root WebApplicationContext: initialization completed in 1259 ms
+""2020-03-23 16:04:15 - Property 'userDn' not set - anonymous context will be used for read-write operations
+""2020-03-23 16:04:15 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-03-23 16:04:15 - HHH000412: Hibernate ORM core version 5.4.12.Final
+""2020-03-23 16:04:15 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-03-23 16:04:15 - HikariPool-1 - Starting...
+""2020-03-23 16:04:16 - HikariPool-1 - Start completed.
+""2020-03-23 16:04:16 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-03-23 16:04:16 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-03-23 16:04:16 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 16:04:16 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-03-23 16:04:17 - Exposing 2 endpoint(s) beneath base path '/actuator'
+""2020-03-23 16:04:17 - Tomcat started on port(s): 7070 (http) with context path ''
+""2020-03-23 16:04:17 - Started EmployeeWebServiceApplication in 3.623 seconds (JVM running for 4.57)
+""2020-03-23 16:04:19 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2020-03-23 16:04:19 - Initializing Servlet 'dispatcherServlet'
+""2020-03-23 16:04:19 - Completed initialization in 7 ms
+""2020-03-23 16:14:42 - Application shutdown requested.
+""2020-03-23 16:14:42 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-03-23 16:14:42 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 16:14:42 - HikariPool-1 - Shutdown initiated...
+""2020-03-23 16:14:42 - HikariPool-1 - Shutdown completed.
+""2020-03-23 16:14:48 - Starting EmployeeWebServiceApplication on vinayprajapati with PID 16244 (C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService\target\classes started by vinayprajapati in C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService)
+""2020-03-23 16:14:48 - No active profile set, falling back to default profiles: default
+""2020-03-23 16:14:49 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 16:14:49 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-03-23 16:14:49 - Finished Spring Data repository scanning in 87ms. Found 1 JPA repository interfaces.
+""2020-03-23 16:14:49 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 16:14:49 - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+""2020-03-23 16:14:49 - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.employeeWebService.repository.EmployeeRepository. If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository.
+""2020-03-23 16:14:49 - Finished Spring Data repository scanning in 8ms. Found 0 LDAP repository interfaces.
+""2020-03-23 16:14:50 - Tomcat initialized with port(s): 7070 (http)
+""2020-03-23 16:14:50 - Starting service [Tomcat]
+""2020-03-23 16:14:50 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+""2020-03-23 16:14:50 - Initializing Spring embedded WebApplicationContext
+""2020-03-23 16:14:50 - Root WebApplicationContext: initialization completed in 2245 ms
+""2020-03-23 16:14:51 - Property 'userDn' not set - anonymous context will be used for read-write operations
+""2020-03-23 16:14:51 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-03-23 16:14:51 - HHH000412: Hibernate ORM core version 5.4.12.Final
+""2020-03-23 16:14:51 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-03-23 16:14:52 - HikariPool-1 - Starting...
+""2020-03-23 16:14:52 - HikariPool-1 - Start completed.
+""2020-03-23 16:14:52 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-03-23 16:14:53 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-03-23 16:14:53 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 16:14:53 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-03-23 16:14:54 - Exposing 2 endpoint(s) beneath base path '/actuator'
+""2020-03-23 16:14:54 - Tomcat started on port(s): 7070 (http) with context path ''
+""2020-03-23 16:14:54 - Started EmployeeWebServiceApplication in 6.163 seconds (JVM running for 7.359)
+""2020-03-23 16:14:55 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2020-03-23 16:14:55 - Initializing Servlet 'dispatcherServlet'
+""2020-03-23 16:14:55 - Completed initialization in 12 ms
+""2020-03-23 16:52:14 - Application shutdown requested.
+""2020-03-23 16:52:14 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-03-23 16:52:14 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 16:52:14 - HikariPool-1 - Shutdown initiated...
+""2020-03-23 16:52:14 - HikariPool-1 - Shutdown completed.
+""2020-03-23 16:52:19 - Starting EmployeeWebServiceApplication on vinayprajapati with PID 1136 (C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService\target\classes started by vinayprajapati in C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService)
+""2020-03-23 16:52:19 - No active profile set, falling back to default profiles: default
+""2020-03-23 16:52:19 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 16:52:19 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-03-23 16:52:19 - Finished Spring Data repository scanning in 49ms. Found 1 JPA repository interfaces.
+""2020-03-23 16:52:19 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 16:52:19 - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+""2020-03-23 16:52:19 - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.employeeWebService.repository.EmployeeRepository. If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository.
+""2020-03-23 16:52:19 - Finished Spring Data repository scanning in 4ms. Found 0 LDAP repository interfaces.
+""2020-03-23 16:52:20 - Tomcat initialized with port(s): 7070 (http)
+""2020-03-23 16:52:20 - Starting service [Tomcat]
+""2020-03-23 16:52:20 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+""2020-03-23 16:52:20 - Initializing Spring embedded WebApplicationContext
+""2020-03-23 16:52:20 - Root WebApplicationContext: initialization completed in 1290 ms
+""2020-03-23 16:52:20 - Property 'userDn' not set - anonymous context will be used for read-write operations
+""2020-03-23 16:52:20 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-03-23 16:52:20 - HHH000412: Hibernate ORM core version 5.4.12.Final
+""2020-03-23 16:52:20 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-03-23 16:52:21 - HikariPool-1 - Starting...
+""2020-03-23 16:52:21 - HikariPool-1 - Start completed.
+""2020-03-23 16:52:21 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-03-23 16:52:21 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-03-23 16:52:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 16:52:22 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-03-23 16:52:22 - Exposing 2 endpoint(s) beneath base path '/actuator'
+""2020-03-23 16:52:22 - Tomcat started on port(s): 7070 (http) with context path ''
+""2020-03-23 16:52:22 - Started EmployeeWebServiceApplication in 3.576 seconds (JVM running for 4.336)
+""2020-03-23 16:52:23 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2020-03-23 16:52:23 - Initializing Servlet 'dispatcherServlet'
+""2020-03-23 16:52:23 - Completed initialization in 6 ms
+""2020-03-23 17:04:25 - Application shutdown requested.
+""2020-03-23 17:04:25 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-03-23 17:04:25 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 17:04:25 - HikariPool-1 - Shutdown initiated...
+""2020-03-23 17:04:25 - HikariPool-1 - Shutdown completed.
+""2020-03-23 17:59:01 - Starting EmployeeWebServiceApplication on vinayprajapati with PID 20240 (C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService\target\classes started by vinayprajapati in C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService)
+""2020-03-23 17:59:01 - No active profile set, falling back to default profiles: default
+""2020-03-23 17:59:02 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 17:59:02 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-03-23 17:59:02 - Finished Spring Data repository scanning in 53ms. Found 1 JPA repository interfaces.
+""2020-03-23 17:59:02 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 17:59:02 - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+""2020-03-23 17:59:02 - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.employeeWebService.repository.EmployeeRepository. If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository.
+""2020-03-23 17:59:02 - Finished Spring Data repository scanning in 6ms. Found 0 LDAP repository interfaces.
+""2020-03-23 17:59:02 - Tomcat initialized with port(s): 7070 (http)
+""2020-03-23 17:59:02 - Starting service [Tomcat]
+""2020-03-23 17:59:02 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+""2020-03-23 17:59:02 - Initializing Spring embedded WebApplicationContext
+""2020-03-23 17:59:02 - Root WebApplicationContext: initialization completed in 1604 ms
+""2020-03-23 17:59:03 - Property 'userDn' not set - anonymous context will be used for read-write operations
+""2020-03-23 17:59:03 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-03-23 17:59:03 - HHH000412: Hibernate ORM core version 5.4.12.Final
+""2020-03-23 17:59:03 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-03-23 17:59:03 - HikariPool-1 - Starting...
+""2020-03-23 17:59:03 - HikariPool-1 - Start completed.
+""2020-03-23 17:59:03 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-03-23 17:59:04 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-03-23 17:59:04 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 17:59:05 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-03-23 17:59:05 - Exposing 2 endpoint(s) beneath base path '/actuator'
+""2020-03-23 17:59:05 - Stopping service [Tomcat]
+""2020-03-23 17:59:05 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-03-23 17:59:05 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 7070 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 7070 or configure this application to listen on another port.
+
+""2020-03-23 17:59:05 - Invocation of destroy method failed on bean with name 'tomcatMetricsBinder': java.lang.NullPointerException
+""2020-03-23 17:59:05 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-03-23 17:59:05 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 17:59:05 - HikariPool-1 - Shutdown initiated...
+""2020-03-23 17:59:05 - HikariPool-1 - Shutdown completed.
+""2020-03-23 17:59:24 - Starting EmployeeWebServiceApplication on vinayprajapati with PID 21072 (C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService\target\classes started by vinayprajapati in C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService)
+""2020-03-23 17:59:24 - No active profile set, falling back to default profiles: default
+""2020-03-23 17:59:25 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 17:59:25 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-03-23 17:59:25 - Finished Spring Data repository scanning in 51ms. Found 1 JPA repository interfaces.
+""2020-03-23 17:59:25 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 17:59:25 - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+""2020-03-23 17:59:25 - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.employeeWebService.repository.EmployeeRepository. If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository.
+""2020-03-23 17:59:25 - Finished Spring Data repository scanning in 6ms. Found 0 LDAP repository interfaces.
+""2020-03-23 17:59:25 - Tomcat initialized with port(s): 7070 (http)
+""2020-03-23 17:59:25 - Starting service [Tomcat]
+""2020-03-23 17:59:25 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+""2020-03-23 17:59:25 - Initializing Spring embedded WebApplicationContext
+""2020-03-23 17:59:25 - Root WebApplicationContext: initialization completed in 1511 ms
+""2020-03-23 17:59:26 - Property 'userDn' not set - anonymous context will be used for read-write operations
+""2020-03-23 17:59:26 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-03-23 17:59:26 - HHH000412: Hibernate ORM core version 5.4.12.Final
+""2020-03-23 17:59:26 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-03-23 17:59:26 - HikariPool-1 - Starting...
+""2020-03-23 17:59:26 - HikariPool-1 - Start completed.
+""2020-03-23 17:59:26 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-03-23 17:59:27 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-03-23 17:59:27 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 17:59:27 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-03-23 17:59:28 - Exposing 2 endpoint(s) beneath base path '/actuator'
+""2020-03-23 17:59:28 - Tomcat started on port(s): 7070 (http) with context path ''
+""2020-03-23 17:59:28 - Started EmployeeWebServiceApplication in 4.354 seconds (JVM running for 5.14)
+""2020-03-23 17:59:29 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2020-03-23 17:59:29 - Initializing Servlet 'dispatcherServlet'
+""2020-03-23 17:59:29 - Completed initialization in 8 ms
+""2020-03-23 18:10:31 - Application shutdown requested.
+""2020-03-23 18:10:31 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-03-23 18:10:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 18:10:31 - HikariPool-1 - Shutdown initiated...
+""2020-03-23 18:10:31 - HikariPool-1 - Shutdown completed.
+""2020-03-23 18:10:36 - Starting EmployeeWebServiceApplication on vinayprajapati with PID 7568 (C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService\target\classes started by vinayprajapati in C:\Users\vinayprajapati\eclipse-workspace\EmployeeWebService)
+""2020-03-23 18:10:36 - No active profile set, falling back to default profiles: default
+""2020-03-23 18:10:37 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 18:10:37 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-03-23 18:10:37 - Finished Spring Data repository scanning in 58ms. Found 1 JPA repository interfaces.
+""2020-03-23 18:10:37 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-03-23 18:10:37 - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+""2020-03-23 18:10:37 - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.employeeWebService.repository.EmployeeRepository. If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository.
+""2020-03-23 18:10:37 - Finished Spring Data repository scanning in 5ms. Found 0 LDAP repository interfaces.
+""2020-03-23 18:10:37 - Tomcat initialized with port(s): 7070 (http)
+""2020-03-23 18:10:37 - Starting service [Tomcat]
+""2020-03-23 18:10:37 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+""2020-03-23 18:10:37 - Initializing Spring embedded WebApplicationContext
+""2020-03-23 18:10:37 - Root WebApplicationContext: initialization completed in 1502 ms
+""2020-03-23 18:10:38 - Property 'userDn' not set - anonymous context will be used for read-write operations
+""2020-03-23 18:10:38 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-03-23 18:10:38 - HHH000412: Hibernate ORM core version 5.4.12.Final
+""2020-03-23 18:10:38 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-03-23 18:10:38 - HikariPool-1 - Starting...
+""2020-03-23 18:10:38 - HikariPool-1 - Start completed.
+""2020-03-23 18:10:38 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-03-23 18:10:39 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-03-23 18:10:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 18:10:39 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-03-23 18:10:40 - Exposing 2 endpoint(s) beneath base path '/actuator'
+""2020-03-23 18:10:40 - Tomcat started on port(s): 7070 (http) with context path ''
+""2020-03-23 18:10:40 - Started EmployeeWebServiceApplication in 4.292 seconds (JVM running for 5.338)
+""2020-03-23 18:10:41 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2020-03-23 18:10:41 - Initializing Servlet 'dispatcherServlet'
+""2020-03-23 18:10:41 - Completed initialization in 6 ms
+""2020-03-23 18:14:33 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+"java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135)
+	at com.employeeWebService.serviceImpl.EmployeeServiceImpl.getByEmployeeCode(EmployeeServiceImpl.java:25)
+	at com.employeeWebService.controller.EmployeeController.getByEmployeeCode(EmployeeController.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+"2020-03-23 18:17:41 - Application shutdown requested.
+""2020-03-23 18:17:41 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-03-23 18:17:41 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-03-23 18:17:41 - HikariPool-1 - Shutdown initiated...
+""2020-03-23 18:17:41 - HikariPool-1 - Shutdown completed.
 "

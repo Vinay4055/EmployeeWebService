@@ -19,7 +19,7 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
 	@Autowired
-	private Employee employee;
+	private Employee employee;//Make it correct
 
 	@RequestMapping(value = "/getAll", method = RequestMethod.GET, headers = "Accept=application/json")
 	public List<Employee> getAllEmployee() {
@@ -35,7 +35,7 @@ public class EmployeeController {
 
 	}
 
-	@PostMapping("/addEmployee")
+	@PostMapping("/addEmployee") //employee 
 	public void addEmployee(@RequestBody Employee employee) {
 		employeeService.addEmployee(employee.convertEmployeeModelToEntity(employee));
 		

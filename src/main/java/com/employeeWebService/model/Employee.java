@@ -41,7 +41,7 @@ public class Employee {
 	public void setDobInString(String dobInString) throws ParseException {
 		this.dobInString = dobInString;
 		if(dobInString != null)
-		this.dateOfBirth= new SimpleDateFormat("yyyy-MM-dd").parse(dobInString);
+			this.dateOfBirth= new SimpleDateFormat("yyyy-MM-dd").parse(dobInString);
 		
 			
 	}
